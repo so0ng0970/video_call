@@ -11,15 +11,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: const Color.fromARGB(255, 107, 19, 123),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: const [
             Expanded(
+              flex: 2,
               child: _Logo(),
             ),
             Expanded(
+              flex: 4,
               child: _Image(),
             ),
             Expanded(
@@ -40,11 +42,11 @@ class _Logo extends StatelessWidget {
     return Center(
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.orange,
+          color: Colors.pink[300],
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
-              color: Colors.orange[300]!,
+              color: Colors.purple[200]!,
               blurRadius: 12,
               spreadRadius: 2.0,
             ),
@@ -107,6 +109,7 @@ class __ButtonState extends State<_Button> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
           onPressed: () {},
           child: const Text('입장하기'),
         ),
