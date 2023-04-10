@@ -78,9 +78,9 @@ class _CamScreenState extends State<CamScreen> {
                   onPressed: () async {
                     if (engine != null) {
                       await engine!.leaveChannel();
+                      engine = null;
                     }
                     Navigator.of(context).pop();
-                    engine = null;
                   },
                   child: const Text('채널나가기'),
                 ),
