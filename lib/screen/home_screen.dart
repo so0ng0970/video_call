@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_call/screen/cam_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -70,6 +71,7 @@ class _Logo extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30.0,
                   color: Colors.white,
+                  fontWeight: FontWeight.bold,
                   letterSpacing: 8.0,
                 ),
               )
@@ -110,7 +112,13 @@ class __ButtonState extends State<_Button> {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const CamScreen(),
+              ),
+            );
+          },
           child: const Text('입장하기'),
         ),
       ],
